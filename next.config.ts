@@ -24,6 +24,7 @@ export default withSentryConfig(nextConfig, {
   // Automatically annotate React components to show their full name in breadcrumbs and session replay
   reactComponentAnnotation: {
     enabled: true,
+    ignoredComponents: ['@react-three/fiber', 'Demo', 'Canvas', 'ambientLight', 'spotLight', 'pointLight', 'Box'],
   },
 
   // Route browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers.
